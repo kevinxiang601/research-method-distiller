@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Method Distiller"
+  short_description: "Top-journal research idea, model, and writing coach"
+  default_prompt: "Use $research-method-distiller to turn this management science research idea into a top-journal-style model, empirical design, and writing plan."
