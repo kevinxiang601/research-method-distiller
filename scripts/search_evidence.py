@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 
@@ -44,6 +45,8 @@ def find_hits(query: str, limit: int) -> list[tuple[str, int, str]]:
 
 
 def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("query", help="Search terms, separated by spaces")
     parser.add_argument("--limit", type=int, default=20)

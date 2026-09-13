@@ -4,7 +4,7 @@ Use this file when the user adds new Zotero papers and asks to update the distil
 
 ## Update Order
 
-1. Read the latest inventory and queue in `refined_indexes`.
+1. Read the latest inventory and queue in the user's accessible research workspace. If only this GitHub skill is available, use its bundled snapshots and state clearly that they may be older than the user's Zotero library.
 2. Identify new or changed papers by Zotero key, DOI, title similarity, PDF path, and PDF hash when available.
 3. Prioritize papers close to the user's current direction: supply chain, IO, platform, game theory, empirical identification, OR/data-driven operations, AI/platform governance, and Chinese policy mechanisms.
 4. Skip or defer papers that are far from the direction, duplicated, not formal research papers, or lack readable full text.
@@ -12,6 +12,8 @@ Use this file when the user adds new Zotero papers and asks to update the distil
 6. Append distilled lessons to the relevant refined indexes.
 7. Update `refined_indexes/全量精修排序队列.csv` and `.md`.
 8. Update this skill's references only when the new papers add a reusable rule, model family, empirical design, writing move, or evidence category.
+
+Never copy a local absolute PDF path, OneDrive path, or Zotero storage path into this portable skill. Use the paper ID, DOI, title, Zotero key, and (when useful) a relative source label instead. Keep local paths only in local project manifests that are not published here.
 
 ## What To Add To The Skill
 
@@ -40,4 +42,5 @@ After edits, run the skill validator and a small evidence search. Check that:
 - all referenced files exist;
 - `agents/openai.yaml` default prompt mentions `$research-method-distiller`;
 - search script can find at least one known topic in the refined indexes;
-- stage review still reports the right corpus status.
+- stage review still reports the right corpus status;
+- `python scripts/check_portability.py` reports no machine-specific absolute paths.

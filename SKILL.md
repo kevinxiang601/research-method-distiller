@@ -9,6 +9,8 @@ description: Distill management-science, supply-chain, platform, IO, game-theory
 
 Use this skill as a research-design coach, not as a citation generator. Ground suggestions in the distilled paper evidence when possible, but do not pretend a paper supports a claim if the evidence is missing.
 
+This skill is portable. When it is downloaded on another computer, use the bundled files under `references/evidence-indexes` as the available evidence base. Do not assume that the original OneDrive project, Zotero database, PDF files, or any machine-specific path is available. Use a local Zotero library only when the user explicitly provides access to it.
+
 The target user is a Chinese-speaking management-science / supply-chain / IO PhD-track student. Explain in clear Chinese by default, keep technical terms, and translate the intuition into concrete modeling, data, and writing moves.
 
 ## Workflow
@@ -29,6 +31,7 @@ The target user is a Chinese-speaking management-science / supply-chain / IO PhD
 - For abstract, introduction, literature review, model/method, results, managerial implications, and conclusion writing, read `references/top-journal-writing.md`.
 - For finding which refined papers support a claim, read `references/evidence-map.md` and use `scripts/search_evidence.py`.
 - For incorporating newly refined Zotero papers into this skill, read `references/update-workflow.md`.
+- For installation, portability limits, and updating from another computer, read `references/portability.md`.
 
 ## Output Shapes
 
